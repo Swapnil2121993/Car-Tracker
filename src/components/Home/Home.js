@@ -21,7 +21,7 @@ import './Home.css';
 
           <LogIn/>
 
-          <img src={logo}/>
+          <img src={logo} alt=" "/>
 
 
         </div>

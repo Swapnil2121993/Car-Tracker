@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component,PropTypes } from 'react';
 import Home from './components/Home/Home';
-import logo from './logo.svg';
+import Header from './common/Header';
 
 import './App.css';
 
@@ -9,9 +9,14 @@ class App extends Component {
     return (
       <div className="App">
         <Home/>
+        {this.props.children}
       </div>
     );
   }
-}
+  }
+
+App.PropTypes = {
+  children:PropTypes.object.isRequired
+};
 
 export default App;

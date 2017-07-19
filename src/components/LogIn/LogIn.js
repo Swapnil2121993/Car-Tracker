@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {browserHistory} from 'react-router';
 import {Modal,Button} from 'react-bootstrap';
 
 
@@ -28,10 +28,11 @@ export default class LogIn extends Component{
       this.setState({open:true});
     }
 
-    onClick=()=>{
-      <Link to="home"/>
-    }
+    onClick=(e)=>{
+      e.preventDefault();
+      browserHistory.push("home");
 
+    }
 
     render(){
       return(
@@ -62,7 +63,7 @@ export default class LogIn extends Component{
         value={this.state.password}
         />
 
-        <Button type="button" className="btn-btn-primary" onClick={this.onClick}>Submit </Button>
+        <Button onClick={this.onClick} className="btn-btn-primary" >Submit </Button>
 
         </Modal.Body>
 
@@ -73,8 +74,6 @@ export default class LogIn extends Component{
 			   </Modal.Footer>
         </Modal>
         </div>
-
-
 
 
     )
