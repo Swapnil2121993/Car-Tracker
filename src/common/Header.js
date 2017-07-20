@@ -12,7 +12,7 @@ export default class Header extends Component{
 
           <ul className="nav navbar-nav" style={{marginLeft:100}}>
             <li className="active"><a href="home">Home</a></li>
-            <li><a href="#">Vehicle</a></li>
+            <li><a href="vehicle">Vehicle</a></li>
             <li><a href="#">Reading</a></li>
             <li><a href="#">Alert</a></li>
             <li><a href="login">Logout</a></li>
