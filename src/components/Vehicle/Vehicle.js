@@ -1,8 +1,13 @@
-import React,{Component} from 'react';
+import React,{Component,PropTypes} from 'react';
 import {table} from 'react-bootstrap';
 
 export default class Vehicle extends Component{
-
+  constructor(props){
+    super(props);
+    this.state={
+      vehicleList:[],
+    };
+  }
   render(){
 
     let vehicleList = this.props.vehicle;

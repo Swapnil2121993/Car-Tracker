@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
+    "google-map-react": "^0.24.0",
+    "google-maps-react": "^1.0.19",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",

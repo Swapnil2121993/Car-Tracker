@@ -1,28 +1,28 @@
-import React, {Component,PropTypes} from 'react';
+import React,{Component,PropTypes} from 'react';
 import axios from 'axios';
-import Vehicle from './Vehicle';
+import Reading from './Reading';
 
-export default class VehicleList extends Component {
+export default class vehicleReading extends Component {
     constructor(props){
       super(props);
       this.state={
-        vehicleList:[]
+        vehicleReadings:[]
       };
     }
 
     getInitialState(){
           return{
-            vehicleList:[]
+            vehicleReadings:[]
           };
     }
 
     componentDidMount(){
-      axios.get("http://localhost:8080/api/vehicles")
+      axios.post("http://localhost:8080/api/readings")
            .then(function(response){
              if(response.data.results){
                console.log(response.data.results)
                this.setState({
-                 vehicleList:response.data.results
+                 vehicleReadings:response.data.results
 
                })
              }
@@ -36,13 +36,13 @@ export default class VehicleList extends Component {
       render(){
         return (
           <div>
-          <Vehicle vehicle={this.state.vehicleList} />
+          <Reading reading={this.state.vehicleReadings} />
           </div>
 
         )
       }
   }
 
-  VehicleList.propTypes={
-    vehicleList: PropTypes.array.isRequired,
+  vehicleReading.propTypes={
+    vehicleReadings:PropTypes.array.isRequired,
   }

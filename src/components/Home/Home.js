@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LogIn from '../LogIn/LogIn';
+import Signup from '../LogIn/Signup';
 import logo from './cartracker.jpg';
 import './Home.css';
 
@@ -12,6 +13,7 @@ import './Home.css';
           <h3 style={{marginRight:1250}}> Track your CAR </h3>
 
           <LogIn/>
+          <Signup/>
 
           <img src={logo} alt=" "/>
 

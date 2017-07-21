@@ -38,8 +38,7 @@ export default class LogIn extends Component{
       return(
         <div>
         <Button type="button" style={{marginLeft:750}} className="btn-btn-primary" onClick={this.handleClick}> LogIn </Button>
-        <Button type="button" className="btn-btn-primary"> SignUp</Button>
-
+  
         <Modal
         show={this.state.open}
         onHide={this.close}
