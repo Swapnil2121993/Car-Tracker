@@ -21,10 +21,7 @@ export default class VehicleList extends Component {
            .then(function(response){
              if(response.data.results){
                console.log(response.data.results)
-               this.setState({
-                 vehicleList:response.data.results
-
-               })
+               this.setState({ vehicleList:response.data.results})
              }
 
           })
@@ -45,4 +42,8 @@ export default class VehicleList extends Component {
 
   VehicleList.propTypes={
     vehicleList: PropTypes.array.isRequired,
-  }
+  };
+
+  static defaultProps = {
+      vehicleList:[],
+  };

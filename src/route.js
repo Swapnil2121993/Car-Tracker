@@ -6,6 +6,7 @@ import Header from './common/Header';
 import Vehicle from './components/Vehicle/Vehicle';
 import Reading from './components/Reading/Reading';
 import SimpleMap from './components/Map/Map';
+import Alert from './components/Alert/Alert';
 
 
 export default(
@@ -16,6 +17,8 @@ export default(
                 <Route path="vehicle" component={Vehicle}/>
                 <Route path= "reading" component={Reading}/>
                 <Route path="location" component={SimpleMap}/>
+                <Route path="alert" component={Alert}/>
+
 
                 </Route>
 

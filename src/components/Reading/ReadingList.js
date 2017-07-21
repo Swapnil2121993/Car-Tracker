@@ -17,7 +17,9 @@ export default class vehicleReading extends Component {
     }
 
     componentDidMount(){
-      axios.post("http://localhost:8080/api/readings")
+      axios.post("http://localhost:8080/api/readings",{
+        Vin: 'vin',
+      })
            .then(function(response){
              if(response.data.results){
                console.log(response.data.results)
@@ -45,4 +47,8 @@ export default class vehicleReading extends Component {
 
   vehicleReading.propTypes={
     vehicleReadings:PropTypes.array.isRequired,
-  }
+  };
+
+  static defaultProps={
+      vehicleReading:[],
+  };
